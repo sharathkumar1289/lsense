@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduWell - Learn Graphic Design</title>
+     <style>
+     /* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-text {
+    z-index: 1;
+}
+
+.hero-text h1, .hero-text h2 {
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-text h2 {
+    font-size: 24px;
+    color: #555;
+}
+
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+}
+
+/* Services Section Styles */
+.services {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+.service p {
+    color: #555;
+}
+
+/* What You Can Learn Section Styles */
+.what-you-can-learn {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.learn-item {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.learn-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.learn-item h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+.learn-item p {
+    color: #555;
+}
+
+.learn-item-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.learn-item-details span {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Special Offer Section Styles */
+.special-offer {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.offer-content {
+    text-align: left;
+}
+
+.offer-image {
+    position: relative;
+}
+
+.offer-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.special-offer h3 {
+    font-weight: bold;
+    color: #333;
+}
+
+.special-offer h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.special-offer p {
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.testimonial {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    color: #555;
+}
+
+.testimonial h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial span {
+    color: #777;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 80px 0;
+    background: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-map {
+    width: 50%;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-item img {
+    width: 30px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact-item h3 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    color: #555;
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.contact-form h2 {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    color: #555;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Footer Styles */
+footer {
+    background: #f5f5f5;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #007bff;
+}
+
+/* Button Styles */
+.btn {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+    }
+
+    .contact-map,
+    .contact-form {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">EduWell</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Welcome to Our School</h1>
+                <h2>Best Place To Learn Graphic Design!</h2>
+                <button class="btn">Join Us Now</button>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="Woman holding a book">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Provided Services</h2>
+            <div class="services-grid">
+                <div class="service">
+                    <img src="images/ready-target.svg" alt="Ready Target Icon">
+                    <h3>Ready Target</h3>
+                    <p>Please tell your friends about the best CSS template website chat. Don't waste time.</p>
+                </div>
+                <div class="service">
+                    <img src="images/technology.svg" alt="Technology Icon">
+                    <h3>Technology</h3>
+                    <p>Aenean bibendum consectetur ex eu porttitor. Nulla maecenas ultrices metus.</p>
+                </div>
+                <div class="service">
+                    <img src="images/useful-tricks.svg" alt="Useful Tricks Icon">
+                    <h3>Useful Tricks</h3>
+                    <p>In non nibh eget, magna efficitur ultrices nam quis quam at. Pellentesque lobortis.</p>
+                </div>
+                <div class="service">
+                    <img src="images/creative-ideas.svg" alt="Creative Ideas Icon">
+                    <h3>Creative Ideas</h3>
+                    <p>Aenean bibendum consectetur ex eu porttitor. Nulla maecenas ultrices metus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-you-can-learn">
+        <div class="container">
+            <h2>What You Can Learn</h2>
+            <p>You just think about Templatezilla whenever you need free CSS templates for your business what you want!</p>
+            <div class="learn-grid">
+                <div class="learn-item">
+                    <button class="btn">Web Development</button>
+                </div>
+                <div class="learn-item">
+                    <img src="images/web-development.jpg" alt="Web Development Image">
+                    <div class="learn-item-content">
+                        <h3>Web Development</h3>
+                        <p>Did you know that you can use a free CSS template for landing pages of HTML, templates, and a variety of website templates.</p>
+                        <p>You just need to log up and edit the website right now. If you have any suggestions or comments about these templates, you can feel free to go to contact page for our email address.</p>
+                        <div class="learn-item-details">
+                            <span>$128</span>
+                            <span>3 Weeks</span>
+                            <span>Certification</span>
+                        </div>
+                        <button class="btn">Discover Now</button>
+                    </div>
+                </div>
+                <div class="learn-item">
+                    <button class="btn">Graphic Design</button>
+                </div>
+                <div class="learn-item">
+                    <button class="btn">Web Design</button>
+                </div>
+                <div class="learn-item">
+                    <button class="btn">WordPress</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-content">
+                <h3>Get the sale right now!</h3>
+                <h2>Up to 50% OFF For 1+ courses</h2>
+                <p>Log  VIIS Trojan Bicycle rights my hand green,  vice  probters i haven't heard of them since i cross at the levee </p>
+                <button class="btn">View Courses</button>
+            </div>
+            <div class="offer-image">
+                <img src="images/special-offer.jpg" alt="People working on a project">
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What They Think</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem."</p>
+                    <h4>Andrew Hall</h4>
+                    <span>Marketing Manager</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem."</p>
+                    <h4>Maxi Power</h4>
+                    <span>Tech Designer</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Praesent accumsan condimentum arcu, id porttitor est semper nec. Nunc diam lorem."</p>
+                    <h4>Olivia Too</h4>
+                    <span>Creative Designer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.213626258056!2d-122.47107959999999!3d37.805274000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580795a58e0c3%3A0x1e79709d4bb62788!2sNewcastle%20Beach%20Park%2C%20San%20Francisco%2C%20CA%2094121%2C%20USA!5e0!3m2!1sen!2sus!4v1701219219691!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="images/phone-icon.svg" alt="Phone Icon">
+                        <h3>Phone</h3>
+                        <p>010 820 0143</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/mobile-icon.svg" alt="Mobile Icon">
+                        <h3>Mobile</h3>
+                        <p>000 680 6790</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Say Hello</h2>
+                <p>If you need a working contact form by PHP script please visit Templatezilla's contact page for more info.</p>
+                <form action="#">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button class="btn" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>Copyright © 2023 EduWell Co. Ltd. All rights reserved. | Design: Templatezilla</p>
+        </div>
+    </footer>
+</body>
+</html>

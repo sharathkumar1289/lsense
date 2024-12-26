@@ -1,0 +1,8 @@
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.csproj.AssemblyReference.cache
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.AssemblyInfoInputs.cache
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.AssemblyInfo.cs
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.csproj.CoreCompileInputs.cache
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.MvcApplicationPartsAssemblyInfo.cs
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.MvcApplicationPartsAssemblyInfo.cache
+/Users/sharathkumar/Projects/MovieRentalSystem/obj/Debug/net8.0/MovieRentalSystem.sourcelink.json

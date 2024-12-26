@@ -3,26 +3,27 @@ import Community from "@/components/Community";
 import CoreFeatures from "@/components/CoreFeatures";
 import Features from "@/components/Features";
 import HeroSection from "@/components/HeroSection";
-import Pricing from "@/components/Pricing";
-import QualityFeatures from "@/components/QualityFeatures";
+import Navbar from "@/components/Navbar";
 import Services from "@/components/Services";
-import Subscribe from "@/components/Subscribe";
+import Portfolio from "@/components/Team";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
+import Contact from "@/components/contact";
+
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-32">
+
+      <Navbar />
+
       <HeroSection />
-     
-      <QualityFeatures />
       <CoreFeatures />
-    
-      <Team />
-      <Testimonials />
-      <Subscribe />
-      <Community />
+      <Features />
+      <Services />
+      <Community/>
+     
     </div>
   );
 }

@@ -1,26 +1,18 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/*/.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'class', // or 'media' or 'class'
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
-      colors: {
-        trueGray: colors.trueGray,
-        primaryPurple: '#A9A5EF',
-      },
-      fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require('@tailwindcss/aspect-ratio'),
-    // Add other plugins as needed
-  ],
+  plugins: [],
 };
